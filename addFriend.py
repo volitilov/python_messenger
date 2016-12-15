@@ -1,6 +1,6 @@
 from user import User
 import shelve
-data_b = 'users-db'
+data_b = 'db/users-db'
 
 class Add_friend(User):
 	def addFriend(self, name):

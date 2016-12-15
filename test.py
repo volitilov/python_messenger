@@ -37,7 +37,7 @@ xxx = AFr('3x', '123')
 
 #	test addFriends ::::::::::::::::::::::::::::::::::::::::
 
-# xxx.addFriend('xxx')
+xxx.addFriend('xxx')
 
 
 #	shelve :::::::::::::::::::::::::::::::::::::::::::::::::
