@@ -37,15 +37,3 @@ class Add_friend(User):
 			raise Exception('{}: не зарегестрирован.'.format(name))
 
 		db.close()
-
-
-
-# user.sendMessage('vasya', 'hello')
-
-# user.log('vasya')
-
-# [ { from: 'lalka', to: 'vasya', text: 'hello' } ]
-
-
-# def sendMessage(self, to, text):
-# 	msg = new Message(self.username, to, text)

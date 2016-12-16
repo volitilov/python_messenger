@@ -1,7 +1,8 @@
 from user import User
 from addFriend import Add_friend as AFr
+from msg import Message
 
-#	class User :::::::::::::::::::::::::::::::::::::::::::::
+#	class User /////////////////////////////////////////////
 #	create 	users ::::::::::::::::::::::::::::::::::::::::::
 
 bob = User('Bob', '123')
@@ -27,20 +28,25 @@ xxx = User('xxx', '---')
 # xxx.login()
 
 
-#	class Add_friend :::::::::::::::::::::::::::::::::::::::
+#	class Add_friend ///////////////////////////////////////
 #	::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-xxx = AFr('3x', '123')
+# xxx = AFr('3x', '123')
 
 # xxx.registration()
 # xxx.login()
 
 #	test addFriends ::::::::::::::::::::::::::::::::::::::::
 
-xxx.addFriend('xxx')
+ban.addFriend('3x')
+
+#	class Message //////////////////////////////////////////
+#	::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+# xxx.sendMessage('Ban', 'hello')
 
 
-#	shelve :::::::::::::::::::::::::::::::::::::::::::::::::
+#	shelve /////////////////////////////////////////////////
 #	test users-db ::::::::::::::::::::::::::::::::::::::::::
 
 import shelve
