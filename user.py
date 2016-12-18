@@ -1,6 +1,8 @@
 import shelve
 data_b = 'db/users-db'
 
+#	:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 class User:
 	def __init__(self, username, password):
 		self.username = username
@@ -34,12 +36,3 @@ class User:
 			raise Exception('{} регестрируйся.'.format(self.username))
 
 		db.close()
-
-	def gatherAttrs(self):
-		attrs = []
-		for key in sorted(self.__dict__):
-			attrs.append('{}: {}'.format(key, getattr(self, key)))
-		return ', '.join(attrs)
-
-	def __str__(self):
-		return '[{} => {}]'.format(self.__class__.__name__, self.gatherAttrs())

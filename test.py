@@ -1,15 +1,15 @@
 from user import User
-from addFriend import Add_friend as AFr
-from msg import Message
+from message import Message
+from messenger import Messenger
 
 #	class User /////////////////////////////////////////////
 #	create 	users ::::::::::::::::::::::::::::::::::::::::::
 
-bob = User('Bob', '123')
-i01 = User('i01', 'faint')
-sam = User('Sam', 'qwe')
-ban = User('Ban', '8787')
-xxx = User('xxx', '---')
+# bob = User('Bob', '123')
+# i01 = User('i01', 'faint')
+# sam = User('Sam', 'qwe')
+# ban = User('Ban', '8787')
+# xxx = User('xxx', '---')
 
 #	test registration ::::::::::::::::::::::::::::::::::::::
 
@@ -38,20 +38,43 @@ xxx = User('xxx', '---')
 
 #	test addFriends ::::::::::::::::::::::::::::::::::::::::
 
-ban.addFriend('3x')
+# ban.addFriend('3x')
 
 #	class Message //////////////////////////////////////////
 #	::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# xxx.sendMessage('Ban', 'hello')
+# a = Message('Bob', 'Max', 'hello')
+# b = Message('Max', 'Bob', 'Hay')
+
+#	class Messenger ////////////////////////////////////////
+#	create user messenger ::::::::::::::::::::::::::::::::::
+
+
+bob = Messenger('Bob', '123')
+# i01 = User('i01', 'faint')
+# sam = User('Sam', 'qwe')
+# ban = User('Ban', '8787')
+xxx = Messenger('xxx', '---')
+
+# xxx.addFriend('Bob')
+# bob.addFriend('xxx')
+
+
+# xxx.sendMessage('Bob', 'FUCK YOU')
+
+xxx.log('Bob')
+
+#	test addFriend() :::::::::::::::::::::::::::::::::::::::
+
 
 
 #	shelve /////////////////////////////////////////////////
-#	test users-db ::::::::::::::::::::::::::::::::::::::::::
+#	test users-db, messages-db :::::::::::::::::::::::::::::
 
 import shelve
 
-d = shelve.open('db/users-db')
+# d = shelve.open('db/users-db')
+d = shelve.open('db/messages-db')
 
 print(list(d))
 
@@ -66,6 +89,6 @@ for key in d:
 # d.clear()
 
 # d['1'] = d['6']
-# del d['6']
+# del d['2'], d['3'], d['4']
 
 d.close()
